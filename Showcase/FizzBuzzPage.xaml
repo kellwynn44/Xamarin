@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Showcase.FizzBuzzPage"
+             x:Name="mainBackgroundColor"
+             BackgroundColor="DarkOrange">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS, Android, UWP" Value="20, 20, 20, 20"/>
+        </OnPlatform>
+    </ContentPage.Padding>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="labelText"
+               BackgroundColor="Black"
+               TextColor="White"
+               FontSize="Large"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"
+               Padding="35,35,35,35"/>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="runAgainButton"
+                        Text="Run Again"
+                        Padding="15,15,15,15"
+                        Clicked="RunAgainButtonClicked"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        BackgroundColor="Black"
+                        TextColor="White"
+                        IsVisible="false"/>
+                <Button x:Name="returnButton"
+                        Text="Return"
+                        Padding="15,15,15,15"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        BackgroundColor="Black"
+                        TextColor="White"
+                        IsVisible="false"/>
+            </StackLayout>           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

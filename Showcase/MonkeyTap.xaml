@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Showcase.MonkeyTapPage">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0, 20, 0, 0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     VerticalOptions="FillAndExpand" >
+
+            <BoxView x:Name="boxview0"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnBoxViewTapped" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+
+            <BoxView x:Name="boxview1"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnBoxViewTapped" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+        </StackLayout>
+
+        <Button x:Name="startGameButton"
+                Text="Begin"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Clicked="OnStartGameButtonClicked" />
+
+        <StackLayout Orientation="Horizontal"
+                     VerticalOptions="FillAndExpand" >
+
+            <BoxView x:Name="boxview2"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnBoxViewTapped" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+
+            <BoxView x:Name="boxview3"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnBoxViewTapped" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
